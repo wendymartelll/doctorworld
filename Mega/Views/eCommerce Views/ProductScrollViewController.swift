@@ -25,7 +25,8 @@ class ProductScrollViewController : UITableViewController, UICollectionViewDataS
     @IBOutlet var sizeValueLabel  : UILabel!
     @IBOutlet var colorValueLabel  : UILabel!
     
-    @IBOutlet var descriptionLabel  : UILabel!
+    @IBOutlet weak var descriptionLabel: UITextView!
+//    @IBOutlet var descriptionLabel  : UILabel!
     @IBOutlet var orderButton  : UIButton!
     
     @IBOutlet var productCollectionView : UICollectionView!
@@ -90,6 +91,7 @@ class ProductScrollViewController : UITableViewController, UICollectionViewDataS
         colorValueLabel.textColor = UIColor(white: 0.6, alpha: 1.0)
         colorValueLabel.text = "Blue"
         
+        descriptionLabel.setContentOffset(CGPoint(x: 100, y: 10), animated: true)
         descriptionLabel.font = UIFont(name: MegaTheme.fontName, size: 13)
         descriptionLabel.textColor = UIColor(white: 0.5, alpha: 1.0)
         descriptionLabel.text = "Ocean Dental, a fully equipped dental clinic in Cancun, Mexico, is certified by the American Dental Association, and offers a full range of dental services at much lower rates than comparable dental facilities in the United States and Canada. Ocean Dental has been in operation for 12 years. The experienced dentists practicing at the facility speak English and are either U.S.-licensed or U.S.-trained dentists, skilled in the most up-to-date dental procedures and technology. Ocean Dental uses the latest equipment and best materials. Dental work done at the clinic is guaranteed for up to ten years. Sedation by an anesthesiologist is also offered as an option for your procedure, if desired."
@@ -160,10 +162,11 @@ class ProductScrollViewController : UITableViewController, UICollectionViewDataS
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+
         
-        cell.separatorInset = UIEdgeInsetsZero
-        cell.layoutMargins = UIEdgeInsetsZero
-        cell.selectionStyle = .None
+            cell.separatorInset = UIEdgeInsetsZero
+            cell.layoutMargins = UIEdgeInsetsZero
+            cell.selectionStyle = .None
     }
     
     override func viewDidLayoutSubviews() {

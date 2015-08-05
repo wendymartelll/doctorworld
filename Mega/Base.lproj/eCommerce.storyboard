@@ -874,32 +874,29 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="448" id="BVn-OC-ezz">
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="186" id="BVn-OC-ezz">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BVn-OC-ezz" id="ZZQ-dV-hmt">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioN-w9-mqg">
-                                                    <rect key="frame" x="17" y="-2" width="575" height="56"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etp-lp-RsD">
+                                                    <rect key="frame" x="17" y="4" width="567" height="176.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ioN-w9-mqg" firstAttribute="top" secondItem="ZZQ-dV-hmt" secondAttribute="topMargin" constant="-10" id="4er-em-l4F"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ioN-w9-mqg" secondAttribute="trailing" id="5cI-Mk-R81"/>
-                                                <constraint firstItem="ioN-w9-mqg" firstAttribute="top" secondItem="ZZQ-dV-hmt" secondAttribute="topMargin" constant="-1" id="EsW-SZ-hOE"/>
-                                                <constraint firstItem="ioN-w9-mqg" firstAttribute="centerY" secondItem="ZZQ-dV-hmt" secondAttribute="centerY" id="ip4-wQ-2ac"/>
-                                                <constraint firstItem="ioN-w9-mqg" firstAttribute="leading" secondItem="ZZQ-dV-hmt" secondAttribute="leadingMargin" constant="9" id="v7D-4g-QJn"/>
+                                                <constraint firstItem="Etp-lp-RsD" firstAttribute="top" secondItem="ZZQ-dV-hmt" secondAttribute="top" constant="4" id="2dn-g2-Fk3"/>
+                                                <constraint firstAttribute="centerX" secondItem="Etp-lp-RsD" secondAttribute="centerX" constant="-0.5" id="67h-4a-cpo"/>
+                                                <constraint firstAttribute="trailing" secondItem="Etp-lp-RsD" secondAttribute="trailing" constant="16" id="Azy-MM-Sv3"/>
+                                                <constraint firstAttribute="centerY" secondItem="Etp-lp-RsD" secondAttribute="centerY" constant="0.75" id="h8L-wQ-LcT"/>
+                                                <constraint firstAttribute="bottom" secondItem="Etp-lp-RsD" secondAttribute="bottom" constant="5.5" id="hc5-ZR-MYq"/>
+                                                <constraint firstItem="Etp-lp-RsD" firstAttribute="leading" secondItem="ZZQ-dV-hmt" secondAttribute="leading" constant="17" id="qKk-69-BHR"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="EsW-SZ-hOE"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="52" id="tR4-NS-R52">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1020,7 +1017,7 @@
                         <outlet property="colorContainerView" destination="VgC-d3-fU7" id="Ctn-OI-AFs"/>
                         <outlet property="colorLabel" destination="Sjm-tK-l8y" id="lX7-Ih-yUW"/>
                         <outlet property="colorValueLabel" destination="t5h-Dq-HQB" id="sAz-rh-BZ9"/>
-                        <outlet property="descriptionLabel" destination="ioN-w9-mqg" id="rqT-Zc-WOw"/>
+                        <outlet property="descriptionLabel" destination="Etp-lp-RsD" id="blt-ya-Z1Y"/>
                         <outlet property="orderButton" destination="fyf-wO-68y" id="y58-gF-ERC"/>
                         <outlet property="otherItemsCollectionLayout" destination="bSr-N4-QxH" id="KIn-bN-YEM"/>
                         <outlet property="otherItemsCollectionView" destination="JGk-QB-Snf" id="EgS-lg-TCh"/>

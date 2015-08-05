@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         
         configureView()
         viewLinks = [ViewInfo]()
-        viewLinks.append(ViewInfo(title: "eCommerce Views", segue: "eCommerce", description: "for Shopping Carts, Product Images, Grids and Tables"))
+        viewLinks.append(ViewInfo(title: "Doctor World", segue: "eCommerce", description: "Get a makeover vacation"))
     }
 
     override func didReceiveMemoryWarning() {
